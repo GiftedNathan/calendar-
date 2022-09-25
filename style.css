@@ -35,7 +35,7 @@
   border-top-right-radius: 10px;
   box-shadow: inset 2px 2px 10px #f3f3f3;
 }
-.calender-header .prev, .calender-header .next {
+.calender-header .prev-month, .calender-header .next-month {
   padding: 10px;
   font-size: 24px;
   font-weight: 100;
@@ -45,16 +45,24 @@
   border: 1px solid #f3f3f3;
   cursor: pointer;
 }
-.calender-header p {
+.calender-header .todays-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calender-header .todays-date .day {
   margin: 0px 10px;
   font-size: 84px;
   font-weight: 200;
   text-align: center;
   text-transform: capitalize;
 }
-.calender-header p span {
-  font-size: 24px;
-  display: block;
+.calender-header .todays-date .month-year {
+  font-size: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 .divider {
