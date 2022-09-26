@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lucida Sans", sans-serif;
 }
 
 .container {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(248, 154, 46, 0.219);
@@ -90,23 +92,28 @@
   justify-content: flex-start;
   align-items: center;
   list-style: none;
+  margin-bottom: 15px;
 }
 .calender-body .weekday li {
-  width: 14.2857142857%;
+  width: calc((100% - 14px) / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
+  font-weight: 500;
+  margin: 0px 1px;
   padding: 10px;
+  text-align: center;
   text-transform: capitalize;
+  border-radius: 40%;
+  background-color: rgba(248, 154, 46, 0.199);
   position: relative;
 }
-.calender-body .weekday li::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 5%;
-  width: 45px;
-  height: 38px;
-  border-radius: 50%;
-  background-color: rgba(248, 154, 46, 0.199);
+.calender-body .weekday li:nth-child(odd) {
+  rotate: 5deg;
+}
+.calender-body .weekday li:nth-child(even) {
+  rotate: -5deg;
 }
 .calender-body .days {
   display: flex;
@@ -119,4 +126,19 @@
   width: 14.2857142857%;
   margin-bottom: 10px;
   padding: 10px;
+}
+.calender-body .days .active {
+  padding: 5px 2px;
+  border-radius: 50%;
+  background-color: rgba(248, 154, 46, 0.199);
+  rotate: 10deg;
+}
+.calender-body .days .inactive {
+  opacity: 0.2;
+}
+
+.tech-used {
+  margin-bottom: 30px;
+  font-family: "Lucida Sans", sans-serif;
+  color: rgba(0, 0, 34, 0.7176470588);
 }/*# sourceMappingURL=style.css.map */
